@@ -9,35 +9,7 @@ torch.set_grad_enabled(False)
 
 # Load the CUDA kernel as a python module
 
-# # On Windows
-# lib = load(
-#     name="sgemm_lib",
-#     sources=[
-#         "sgemm.cu",
-#         "sgemm_async.cu",
-#         "sgemm_wmma_tf32_stage.cu",
-#         "sgemm_cublas.cu",
-#     ],
-#     extra_cuda_cflags=[
-#         "-O3",
-#         "-U__CUDA_NO_HALF_OPERATORS__",
-#         "-U__CUDA_NO_HALF_CONVERSIONS__",
-#         "-U__CUDA_NO_HALF2_OPERATORS__",
-#         "-U__CUDA_NO_BFLOAT16_CONVERSIONS__",
-#         "--expt-relaxed-constexpr",
-#         "--expt-extended-lambda",
-#         "--use_fast_math",
-#         "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
-#         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
-#         # "-Xlinker",
-#         # "-Xptxas",
-#     ],
-#     # extra_cflags=["/std:c++20"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
-#     extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
-#     verbose=True,
-# )
-
-# On WSL2
+# On Windows
 lib = load(
     name="sgemm_lib",
     sources=[
@@ -55,15 +27,43 @@ lib = load(
         "--expt-relaxed-constexpr",
         "--expt-extended-lambda",
         "--use_fast_math",
-        # "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
+        "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
         # "-Xlinker",
         # "-Xptxas",
     ],
-    extra_cflags=["-std=c++17"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
-    # extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
+    # extra_cflags=["/std:c++20"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
+    extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
     verbose=True,
 )
+
+# # On WSL2
+# lib = load(
+#     name="sgemm_lib",
+#     sources=[
+#         "sgemm.cu",
+#         "sgemm_async.cu",
+#         "sgemm_wmma_tf32_stage.cu",
+#         "sgemm_cublas.cu",
+#     ],
+#     extra_cuda_cflags=[
+#         "-O3",
+#         "-U__CUDA_NO_HALF_OPERATORS__",
+#         "-U__CUDA_NO_HALF_CONVERSIONS__",
+#         "-U__CUDA_NO_HALF2_OPERATORS__",
+#         "-U__CUDA_NO_BFLOAT16_CONVERSIONS__",
+#         "--expt-relaxed-constexpr",
+#         "--expt-extended-lambda",
+#         "--use_fast_math",
+#         # "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
+#         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
+#         # "-Xlinker",
+#         # "-Xptxas",
+#     ],
+#     extra_cflags=["-std=c++17"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
+#     # extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
+#     verbose=True,
+# )
 
 
 
