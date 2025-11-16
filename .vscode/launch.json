@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/workspace/cudaspace/matmul",
-      "program": "d:/workspace/cudaspace/matmul/build/Debug/outDebug",
+      "cwd": "d:/workspace/cudaspace/sgemm",
+      "program": "d:/workspace/cudaspace/sgemm/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,6 +1,9 @@
-# matmul
+## SGEMM
 Profile sgemm kernels on RTX 3060 on Windows
+
 Implementation from LeetCUDA https://github.com/xlite-dev/LeetCUDA/tree/main/kernels/sgemm
+
+Save files in UTF-8 encode format
 
 ## Run on my Windows
 
@@ -11,9 +14,9 @@ cmd run $conda activate d2l
 modify c_cpp_properties.json $includePath
 
 
-modify sgemm.py compile flags to avoid ambiguous symbol
-add -std=c++20 to extra_cuda_cflags(this option must be added to compile on Windows)
-add extra_ldflags to indicate path of cublas.lib
+modify sgemm.py compile flags to avoid ambiguous symbol  
+add -std=c++20 to extra_cuda_cflags(this option must be added to compile on Windows)  
+add extra_ldflags to indicate path of cublas.lib  
 <!-- Error 
 C:/Users/rst22/.venv/Lib/site-packages/torch/include\torch/csrc/dynamo/compiled_autograd.h(1134): error C2872: 'std': ambiguous symbol
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/include\valarray(20): note: could be 'std'

@@ -27,7 +27,7 @@ lib = load(
         "--expt-relaxed-constexpr",
         "--expt-extended-lambda",
         "--use_fast_math",
-        "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
+        "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be add)
         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
         # "-Xlinker",
         # "-Xptxas",
