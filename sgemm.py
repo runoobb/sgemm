@@ -31,6 +31,7 @@ lib = load(
         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
         # "-Xlinker",
         # "-Xptxas",
+        "-lineinfo",
     ],
     # extra_cflags=["/std:c++20"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
     extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],

@@ -36,6 +36,7 @@ lib = load(
         "--expt-extended-lambda",
         "--use_fast_math",
         "-std=c++20",
+        "-lineinfo", # enable sass line info for profiling
     ],
     extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
     verbose=True,
