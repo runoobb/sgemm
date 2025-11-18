@@ -131,10 +131,14 @@ __global__ void sgemm_t_8x8_sliced_k_f32x4_kernel(float *a, float *b, float *c,
     // 加载数据到共享内存smem s_a BM*BK 128*8 vectorize float4
     int load_gmem_a_k = bk * BK + load_smem_a_k; // global col of a
     int load_gmem_a_addr = load_gmem_a_m * K + load_gmem_a_k;
+
+    // STS.A is bank conflict free
     FLOAT4(s_a[load_smem_a_m][load_smem_a_k]) = FLOAT4(a[load_gmem_a_addr]);
     // 加载数据到共享内存smem s_b BK*BN 8*128 vectorize float4
     int load_gmem_b_k = bk * BK + load_smem_b_k; // global row of b
     int load_gmem_b_addr = load_gmem_b_k * N + load_gmem_b_n;
+    
+    // STS.B is bank conflict free
     FLOAT4(s_b[load_smem_b_k][load_smem_b_n]) = FLOAT4(b[load_gmem_b_addr]);
     __syncthreads();
 #pragma unroll
@@ -145,7 +149,10 @@ __global__ void sgemm_t_8x8_sliced_k_f32x4_kernel(float *a, float *b, float *c,
 #pragma unroll
         for (int n = 0; n < TN; n++) {
           // k from 0~7，0 ~ BK, ty and tx range from 0 to 15, 16x8=128
+          // 1/8 utilization of shared memory bandwidth due to bank conflict
           int comp_smem_a_m = ty * TM + m; // 128*8 128/TM(8)=16 M方向 16线程
+          
+          //
           int comp_smem_b_n = tx * TN + n; // 8*128 128/TN(8)=16 N方向 16线程
           r_c[m][n] += s_a[comp_smem_a_m][k] * s_b[k][comp_smem_b_n];
         }
@@ -166,6 +173,9 @@ __global__ void sgemm_t_8x8_sliced_k_f32x4_kernel(float *a, float *b, float *c,
   }
 }
 
+
+// compared to sgemm_t_8x8_sliced_k_f32x4_kernel,
+// transpose tile a in shared memory(ease bank conflict in LDS from smem to reg, worsen bank conflict in STS access from DRAM(reg) to smem) 
 template <const int BM = 128, const int BN = 128, const int BK = 8,
           const int TM = 8, const int TN = 8, const int OFFSET = 0>
 __global__ void
@@ -275,7 +285,7 @@ sgemm_t_8x8_sliced_k_f32x4_bcf_kernel(float *a, float *b, float *c, const int M,
     // tid 31  -> k 0, n 124 -> all access bank 28~31 (layer_3)
     // conclusion: we still have bank conflicts within warp,
     // 0/8/16/24 -> bank 0~3, 1/9/17/25 -> bank 4~7, etc.
-    // thus, we still need 4 memory issues at least per warp.
+    // thus, we still need 4 memory issues at least per warp.(Bank Conflict Free)
     FLOAT4(s_b[load_b_smem_k][load_b_smem_n]) = FLOAT4(r_load_b[0]);
 
     __syncthreads();
@@ -295,6 +305,9 @@ sgemm_t_8x8_sliced_k_f32x4_bcf_kernel(float *a, float *b, float *c, const int M,
       // [7][0+4~7],[0][64+4~7] -> bank 4~7(layer_28/30), tid 255,tk 0 -> ty 15
       // -> [0][0+60~63],[0][64+60~63] -> bank 28~31(layer_1/3), tid 255,tk 7 ->
       // ty 15 -> [7][0+60~63],[0][64+60~63] -> bank 28~31(layer_29/31),
+      
+      
+      // COMPUTE WARP SWIZZLE Influence 1.SMEM ACCESS / MAC RATIO 2.WRITEBACK DARA LOCALITY EPILOGUE(Reg Framents to DRAM)
       FLOAT4(r_comp_a[0]) = FLOAT4(s_a[tk][ty * TM / 2]);
       FLOAT4(r_comp_a[4]) = FLOAT4(s_a[tk][ty * TM / 2 + BM / 2]);
       // if (tid == < 32 && bx == 0 && by == 0) {

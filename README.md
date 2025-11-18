@@ -14,7 +14,7 @@ cmd run $conda activate d2l
 modify c_cpp_properties.json $includePath
 
 
-modify sgemm.py compile flags to avoid ambiguous symbol  
+modify ./sgemm.py compile flags to avoid ambiguous symbol  
 add -std=c++20 to extra_cuda_cflags(this option must be added to compile on Windows)  
 add extra_ldflags to indicate path of cublas.lib  
 <!-- Error 
@@ -32,7 +32,7 @@ C:/Users/rst22/.venv/Lib/site-packages/torch/include\torch/csrc/dynamo/compiled_
 
 bash run $conda activate torch
 
-no need to modify sgemm.py
+no need to modify ./sgemm.py
 <!-- lib = load(
     name="sgemm_lib",
     sources=[
@@ -53,3 +53,7 @@ no need to modify sgemm.py
     ],
     extra_cflags=["-std=c++17"],
 ) -->
+
+ncu profiler settings in ./profile.sh  
+
+nvcc flags settings in ./launch.py/sgemm.py  

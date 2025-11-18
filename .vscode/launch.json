@@ -2,6 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Python:Script",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "./launch.py",
+      "args": [
+        "--M",
+        "2048",
+        "--N",
+        "2048",
+        "--K",
+        "1024",
+        "--kernel",
+        "sgemm_t_8x4_sliced_k16_f32x4_bcf_dbuf"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "stopOnEntry": true,
+      "env": {}
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",

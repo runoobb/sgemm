@@ -7,67 +7,6 @@ from torch.utils.cpp_extension import load
 
 torch.set_grad_enabled(False)
 
-# Load the CUDA kernel as a python module
-
-# On Windows
-lib = load(
-    name="sgemm_lib",
-    sources=[
-        "sgemm.cu",
-        "sgemm_async.cu",
-        "sgemm_wmma_tf32_stage.cu",
-        "sgemm_cublas.cu",
-    ],
-    extra_cuda_cflags=[
-        "-O3",
-        "-U__CUDA_NO_HALF_OPERATORS__",
-        "-U__CUDA_NO_HALF_CONVERSIONS__",
-        "-U__CUDA_NO_HALF2_OPERATORS__",
-        "-U__CUDA_NO_BFLOAT16_CONVERSIONS__",
-        "--expt-relaxed-constexpr",
-        "--expt-extended-lambda",
-        "--use_fast_math",
-        "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be add)
-        # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
-        # "-Xlinker",
-        # "-Xptxas",
-        "-lineinfo",
-    ],
-    # extra_cflags=["/std:c++20"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
-    extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
-    verbose=True,
-)
-
-# # On WSL2
-# lib = load(
-#     name="sgemm_lib",
-#     sources=[
-#         "sgemm.cu",
-#         "sgemm_async.cu",
-#         "sgemm_wmma_tf32_stage.cu",
-#         "sgemm_cublas.cu",
-#     ],
-#     extra_cuda_cflags=[
-#         "-O3",
-#         "-U__CUDA_NO_HALF_OPERATORS__",
-#         "-U__CUDA_NO_HALF_CONVERSIONS__",
-#         "-U__CUDA_NO_HALF2_OPERATORS__",
-#         "-U__CUDA_NO_BFLOAT16_CONVERSIONS__",
-#         "--expt-relaxed-constexpr",
-#         "--expt-extended-lambda",
-#         "--use_fast_math",
-#         # "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
-#         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
-#         # "-Xlinker",
-#         # "-Xptxas",
-#     ],
-#     extra_cflags=["-std=c++17"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
-#     # extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
-#     verbose=True,
-# )
-
-
-
 MAX_TFLOPS = -1
 
 
@@ -75,13 +14,13 @@ def run_benchmark(
     perf_func: callable,
     a: torch.Tensor,
     b: torch.Tensor,
-    tag: str,
+    tag: str = None,
     out: Optional[torch.Tensor] = None,
     stages: int = -1,
     swizzle: bool = False,
     swizzle_stride: int = 1,
     warmup: int = 2,
-    iters: int = 20,
+    iters: int = 5,
     show_all: bool = False,
 ):
 
@@ -133,7 +72,7 @@ def run_benchmark(
     end = time.time()
     total_time = (end - start) * 1000  # ms
     mean_time = total_time / iters
-    out_info = f"out_{tag}"
+    out_info = f"out_{tag}" if tag else "out"
     out_val = out.flatten()[:2].detach().cpu().numpy().tolist()[:3]
     out_val = [round(v, 8) for v in out_val]
     out_val = [f"{v:<12}"[:10] for v in out_val]
@@ -163,110 +102,171 @@ def run_benchmark(
     return out, mean_time
 
 
-Ms = [4096, 8192, 16384]
-Ns = [4096, 8192, 16384]
-Ks = [2048, 4096, 8192]
-MAX_M, MAX_N, MAX_K = 16384, 16384, 8192
-# pre allocate for fast profiling.
-A = torch.randn((MAX_M, MAX_K), dtype=torch.float).cuda()
-B = torch.randn((MAX_K, MAX_N), dtype=torch.float).cuda()
-C = torch.randn((MAX_M, MAX_N), dtype=torch.float).cuda()
-torch.cuda.synchronize()
+if __name__ == "__main__":
 
-MNKs = [(M, N, K) for M in Ms for N in Ns for K in Ks]
-for M, N, K in MNKs:
-    MAX_TFLOPS = -1
-    print("-" * 130)
-    print(" " * 55 + f"M={M}, N={N}, K={K}")
-    a = A[:M, :K].contiguous()
-    b = B[:K, :N].contiguous()
-    c = C[:M, :N].contiguous()
+    # Load the CUDA kernel as a python module
+
+    # On Windows
+    lib = load(
+        name="sgemm_lib",
+        sources=[
+            "sgemm.cu",
+            "sgemm_async.cu",
+            "sgemm_wmma_tf32_stage.cu",
+            "sgemm_cublas.cu",
+        ],
+        extra_cuda_cflags=[
+            "-O3",
+            "-U__CUDA_NO_HALF_OPERATORS__",
+            "-U__CUDA_NO_HALF_CONVERSIONS__",
+            "-U__CUDA_NO_HALF2_OPERATORS__",
+            "-U__CUDA_NO_BFLOAT16_CONVERSIONS__",
+            "--expt-relaxed-constexpr",
+            "--expt-extended-lambda",
+            "--use_fast_math",
+            "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be add)
+            # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
+            # "-Xlinker",
+            # "-Xptxas",
+            "-lineinfo",
+        ],
+        # extra_cflags=["/std:c++20"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
+        extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
+        verbose=True,
+    )
+
+    # # On WSL2
+    # lib = load(
+    #     name="sgemm_lib",
+    #     sources=[
+    #         "sgemm.cu",
+    #         "sgemm_async.cu",
+    #         "sgemm_wmma_tf32_stage.cu",
+    #         "sgemm_cublas.cu",
+    #     ],
+    #     extra_cuda_cflags=[
+    #         "-O3",
+    #         "-U__CUDA_NO_HALF_OPERATORS__",
+    #         "-U__CUDA_NO_HALF_CONVERSIONS__",
+    #         "-U__CUDA_NO_HALF2_OPERATORS__",
+    #         "-U__CUDA_NO_BFLOAT16_CONVERSIONS__",
+    #         "--expt-relaxed-constexpr",
+    #         "--expt-extended-lambda",
+    #         "--use_fast_math",
+    #         # "-std=c++20", # args passed to NVCC frontend(device code) compiler(this option flag must be added)
+    #         # "-Xcompiler", "/std:c++20", # args passed to host compiler code IN NVCC(this option flag is not a must)
+    #         # "-Xlinker",
+    #         # "-Xptxas",
+    #     ],
+    #     extra_cflags=["-std=c++17"], # args passed Dirrectly to host compiler executable(this option flag is not a must)
+    #     # extra_ldflags=[r"D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib"],
+    #     verbose=True,
+    # )
+
+    Ms = [4096, 8192, 16384]
+    Ns = [4096, 8192, 16384]
+    Ks = [2048, 4096, 8192]
+    MAX_M, MAX_N, MAX_K = 16384, 16384, 8192
+    # pre allocate for fast profiling.
+    A = torch.randn((MAX_M, MAX_K), dtype=torch.float).cuda()
+    B = torch.randn((MAX_K, MAX_N), dtype=torch.float).cuda()
+    C = torch.randn((MAX_M, MAX_N), dtype=torch.float).cuda()
     torch.cuda.synchronize()
 
-    # CUDA Cores FP32
-    # run_benchmark(lib.sgemm_naive_f32, a, b, "f32(naive)", c)
-    run_benchmark(lib.sgemm_t_8x8_sliced_k_f32x4, a, b, "f32x4(t8x8sk)", c)
-    run_benchmark(lib.sgemm_t_8x8_sliced_k_f32x4_bcf, a, b, "f32x4(t8x8bcf)", c)
-    run_benchmark(
-        lib.sgemm_t_8x8_sliced_k_f32x4_bcf_dbuf, a, b, "f32x4(t8x8dbuf)", c
-    )
-    run_benchmark(lib.sgemm_cublas, a, b, "f32(cublas)", c)
-    run_benchmark(partial(torch.matmul, out=c), a, b, "f32_th")
+    MNKs = [(M, N, K) for M in Ms for N in Ns for K in Ks]
+    for M, N, K in MNKs:
+        MAX_TFLOPS = -1
+        print("-" * 130)
+        print(" " * 55 + f"M={M}, N={N}, K={K}")
+        a = A[:M, :K].contiguous()
+        b = B[:K, :N].contiguous()
+        c = C[:M, :N].contiguous()
+        torch.cuda.synchronize()
 
-    print("-" * 62 + "WMMA" + "-" * 64)
-    # stage, thread block swizzle, dsmem
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
-        a,
-        b,
-        "tf32(mma2x4+warp2x4+stage3)",
-        c,
-        stages=3,
-    )
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
-        a,
-        b,
-        "tf32(mma2x4+warp2x4+stage2)",
-        c,
-        stages=2,
-    )
+        # CUDA Cores FP32
+        # run_benchmark(lib.sgemm_naive_f32, a, b, "f32(naive)", c)
+        run_benchmark(lib.sgemm_t_8x8_sliced_k_f32x4, a, b, "f32x4(t8x8sk)", c)
+        run_benchmark(lib.sgemm_t_8x8_sliced_k_f32x4_bcf, a, b, "f32x4(t8x8bcf)", c)
+        run_benchmark(
+            lib.sgemm_t_8x8_sliced_k_f32x4_bcf_dbuf, a, b, "f32x4(t8x8dbuf)", c
+        )
+        run_benchmark(lib.sgemm_cublas, a, b, "f32(cublas)", c)
+        run_benchmark(partial(torch.matmul, out=c), a, b, "f32_th")
 
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
-        a,
-        b,
-        "tf32(mma2x4+...+stage3+dsmem)",
-        c,
-        stages=3,
-    )
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
-        a,
-        b,
-        "tf32(mma2x4+...+stage2+dsmem)",
-        c,
-        stages=2,
-    )
+        print("-" * 62 + "WMMA" + "-" * 64)
+        # stage, thread block swizzle, dsmem
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
+            a,
+            b,
+            "tf32(mma2x4+warp2x4+stage3)",
+            c,
+            stages=3,
+        )
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
+            a,
+            b,
+            "tf32(mma2x4+warp2x4+stage2)",
+            c,
+            stages=2,
+        )
 
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
-        a,
-        b,
-        "tf32(mma2x4+...+stage3+swizzle)",
-        c,
-        stages=3,
-        swizzle=True,
-    )
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
-        a,
-        b,
-        "tf32(mma2x4+...+stage2+swizzle)",
-        c,
-        stages=2,
-        swizzle=True,
-    )
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
+            a,
+            b,
+            "tf32(mma2x4+...+stage3+dsmem)",
+            c,
+            stages=3,
+        )
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
+            a,
+            b,
+            "tf32(mma2x4+...+stage2+dsmem)",
+            c,
+            stages=2,
+        )
 
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
-        a,
-        b,
-        "tf32(...+stage3+dsmem+swizzle)",
-        c,
-        stages=3,
-        swizzle=True,
-    )
-    run_benchmark(
-        lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
-        a,
-        b,
-        "tf32(...+stage2+dsmem+swizzle)",
-        c,
-        stages=2,
-        swizzle=True,
-    )
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
+            a,
+            b,
+            "tf32(mma2x4+...+stage3+swizzle)",
+            c,
+            stages=3,
+            swizzle=True,
+        )
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages,
+            a,
+            b,
+            "tf32(mma2x4+...+stage2+swizzle)",
+            c,
+            stages=2,
+            swizzle=True,
+        )
 
-    run_benchmark(lib.sgemm_cublas_tf32, a, b, "tf32(cublas+tf32)", c)
-    torch.cuda.synchronize()
-    print("-" * 130)
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
+            a,
+            b,
+            "tf32(...+stage3+dsmem+swizzle)",
+            c,
+            stages=3,
+            swizzle=True,
+        )
+        run_benchmark(
+            lib.sgemm_wmma_m16n16k8_mma4x2_warp2x4_stages_dsmem,
+            a,
+            b,
+            "tf32(...+stage2+dsmem+swizzle)",
+            c,
+            stages=2,
+            swizzle=True,
+        )
+
+        run_benchmark(lib.sgemm_cublas_tf32, a, b, "tf32(cublas+tf32)", c)
+        torch.cuda.synchronize()
+        print("-" * 130)

@@ -1,0 +1,792 @@
+[1/5] D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc --generate-dependencies-with-compile --dependency-output sgemm_wmma_tf32_stage.cuda.o.d -Xcudafe --diag_suppress=dll_interface_conflict_dllexport_assumed -Xcudafe --diag_suppress=dll_interface_conflict_none_assumed -Xcudafe --diag_suppress=field_without_dll_interface -Xcudafe --diag_suppress=base_class_has_different_dll_interface -Xcompiler /EHsc -Xcompiler /wd4068 -Xcompiler /wd4067 -Xcompiler /wd4624 -Xcompiler /wd4190 -Xcompiler /wd4018 -Xcompiler /wd4275 -Xcompiler /wd4267 -Xcompiler /wd4244 -Xcompiler /wd4251 -Xcompiler /wd4819 -Xcompiler /MD -DTORCH_EXTENSION_NAME=sgemm_lib -DTORCH_API_INCLUDE_EXTENSION_H -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include\torch\csrc\api\include "-ID:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -IE:\anaconda3\envs\d2l\Include -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++17 -O3 -U__CUDA_NO_HALF_OPERATORS__ -U__CUDA_NO_HALF_CONVERSIONS__ -U__CUDA_NO_HALF2_OPERATORS__ -U__CUDA_NO_BFLOAT16_CONVERSIONS__ --expt-relaxed-constexpr --expt-extended-lambda --use_fast_math -std=c++20 -lineinfo -c D:\workspace\cudaspace\sgemm\sgemm_wmma_tf32_stage.cu -o sgemm_wmma_tf32_stage.cuda.o 
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm_wmma_tf32_stage.cu
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm_wmma_tf32_stage.cu
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+D:\workspace\cudaspace\sgemm\sgemm_wmma_tf32_stage.cu(616): warning #177-D: variable "BK" was declared but never referenced
+    constexpr int BK = WMMA_K;
+                  ^
+
+nvcc warning : incompatible redefinition for option 'std', the last value of this option was used
+sgemm_wmma_tf32_stage.cu
+tmpxft_00003940_00000000-10_sgemm_wmma_tf32_stage.cudafe1.cpp
+[2/5] D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc --generate-dependencies-with-compile --dependency-output sgemm.cuda.o.d -Xcudafe --diag_suppress=dll_interface_conflict_dllexport_assumed -Xcudafe --diag_suppress=dll_interface_conflict_none_assumed -Xcudafe --diag_suppress=field_without_dll_interface -Xcudafe --diag_suppress=base_class_has_different_dll_interface -Xcompiler /EHsc -Xcompiler /wd4068 -Xcompiler /wd4067 -Xcompiler /wd4624 -Xcompiler /wd4190 -Xcompiler /wd4018 -Xcompiler /wd4275 -Xcompiler /wd4267 -Xcompiler /wd4244 -Xcompiler /wd4251 -Xcompiler /wd4819 -Xcompiler /MD -DTORCH_EXTENSION_NAME=sgemm_lib -DTORCH_API_INCLUDE_EXTENSION_H -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include\torch\csrc\api\include "-ID:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -IE:\anaconda3\envs\d2l\Include -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++17 -O3 -U__CUDA_NO_HALF_OPERATORS__ -U__CUDA_NO_HALF_CONVERSIONS__ -U__CUDA_NO_HALF2_OPERATORS__ -U__CUDA_NO_BFLOAT16_CONVERSIONS__ --expt-relaxed-constexpr --expt-extended-lambda --use_fast_math -std=c++20 -lineinfo -c D:\workspace\cudaspace\sgemm\sgemm.cu -o sgemm.cuda.o 
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm.cu
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm.cu
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+D:\workspace\cudaspace\sgemm\sgemm.cu(51): warning #177-D: variable "ty" was declared but never referenced
+    int ty = threadIdx.y;
+        ^
+
+nvcc warning : incompatible redefinition for option 'std', the last value of this option was used
+sgemm.cu
+tmpxft_000014e8_00000000-10_sgemm.cudafe1.cpp
+[3/5] D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc --generate-dependencies-with-compile --dependency-output sgemm_cublas.cuda.o.d -Xcudafe --diag_suppress=dll_interface_conflict_dllexport_assumed -Xcudafe --diag_suppress=dll_interface_conflict_none_assumed -Xcudafe --diag_suppress=field_without_dll_interface -Xcudafe --diag_suppress=base_class_has_different_dll_interface -Xcompiler /EHsc -Xcompiler /wd4068 -Xcompiler /wd4067 -Xcompiler /wd4624 -Xcompiler /wd4190 -Xcompiler /wd4018 -Xcompiler /wd4275 -Xcompiler /wd4267 -Xcompiler /wd4244 -Xcompiler /wd4251 -Xcompiler /wd4819 -Xcompiler /MD -DTORCH_EXTENSION_NAME=sgemm_lib -DTORCH_API_INCLUDE_EXTENSION_H -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include\torch\csrc\api\include "-ID:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -IE:\anaconda3\envs\d2l\Include -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++17 -O3 -U__CUDA_NO_HALF_OPERATORS__ -U__CUDA_NO_HALF_CONVERSIONS__ -U__CUDA_NO_HALF2_OPERATORS__ -U__CUDA_NO_BFLOAT16_CONVERSIONS__ --expt-relaxed-constexpr --expt-extended-lambda --use_fast_math -std=c++20 -lineinfo -c D:\workspace\cudaspace\sgemm\sgemm_cublas.cu -o sgemm_cublas.cuda.o 
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm_cublas.cu
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm_cublas.cu
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+nvcc warning : incompatible redefinition for option 'std', the last value of this option was used
+sgemm_cublas.cu
+tmpxft_00004f0c_00000000-10_sgemm_cublas.cudafe1.cpp
+[4/5] D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc --generate-dependencies-with-compile --dependency-output sgemm_async.cuda.o.d -Xcudafe --diag_suppress=dll_interface_conflict_dllexport_assumed -Xcudafe --diag_suppress=dll_interface_conflict_none_assumed -Xcudafe --diag_suppress=field_without_dll_interface -Xcudafe --diag_suppress=base_class_has_different_dll_interface -Xcompiler /EHsc -Xcompiler /wd4068 -Xcompiler /wd4067 -Xcompiler /wd4624 -Xcompiler /wd4190 -Xcompiler /wd4018 -Xcompiler /wd4275 -Xcompiler /wd4267 -Xcompiler /wd4244 -Xcompiler /wd4251 -Xcompiler /wd4819 -Xcompiler /MD -DTORCH_EXTENSION_NAME=sgemm_lib -DTORCH_API_INCLUDE_EXTENSION_H -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include -IE:\anaconda3\envs\d2l\Lib\site-packages\torch\include\torch\csrc\api\include "-ID:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -IE:\anaconda3\envs\d2l\Include -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++17 -O3 -U__CUDA_NO_HALF_OPERATORS__ -U__CUDA_NO_HALF_CONVERSIONS__ -U__CUDA_NO_HALF2_OPERATORS__ -U__CUDA_NO_BFLOAT16_CONVERSIONS__ --expt-relaxed-constexpr --expt-extended-lambda --use_fast_math -std=c++20 -lineinfo -c D:\workspace\cudaspace\sgemm\sgemm_async.cu -o sgemm_async.cuda.o 
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm_async.cu
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_OPERATORS__”(用“/U__CUDA_NO_HALF_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF_CONVERSIONS__”(用“/U__CUDA_NO_HALF_CONVERSIONS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_HALF2_OPERATORS__”(用“/U__CUDA_NO_HALF2_OPERATORS__”)
+cl: 命令行 warning D9025 :正在重写“/D__CUDA_NO_BFLOAT16_CONVERSIONS__”(用“/U__CUDA_NO_BFLOAT16_CONVERSIONS__”)
+sgemm_async.cu
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/nn/modules/container/any_module_holder.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+            module->_forward_populate_default_args(std::move(arguments)));
+            ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(92): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+    module.attr(name) = wrapper_class;
+    ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(154): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(158): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                module.to(detail::py_object_to_dtype(object), non_blocking);
+                ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(169): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_dtype(dtype), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(171): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(detail::py_object_to_device(device), non_blocking);
+                  ^
+
+E:/anaconda3/envs/d2l/Lib/site-packages/torch/include/torch/csrc/api/include\torch/python.h(173): warning #3189-D: "module" is parsed as an identifier rather than a keyword because the tokens that follow it do not match those of a preprocessor directive
+                  module.to(
+                  ^
+
+nvcc warning : incompatible redefinition for option 'std', the last value of this option was used
+sgemm_async.cu
+tmpxft_00005a50_00000000-10_sgemm_async.cudafe1.cpp
+[5/5] "D:\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.39.33519\bin\Hostx64\x64/link.exe" sgemm.cuda.o sgemm_async.cuda.o sgemm_wmma_tf32_stage.cuda.o sgemm_cublas.cuda.o /nologo /DLL "D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64\cublas.lib" c10.lib c10_cuda.lib torch_cpu.lib torch_cuda.lib -INCLUDE:?warp_size@cuda@at@@YAHXZ torch.lib /LIBPATH:E:\anaconda3\envs\d2l\Lib\site-packages\torch\lib torch_python.lib /LIBPATH:E:\anaconda3\envs\d2l\libs "/LIBPATH:D:\NVIDIA GPU Computing Toolkit\CUDA\v12.6\lib\x64" cudart.lib /out:sgemm_lib.pyd
+  正在创建库 sgemm_lib.lib 和对象 sgemm_lib.exp
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=4096, K=2048
+                  out_f32x4(t8x8sk): ['19.6758804', '-42.465602'], time:12.82238ms, swizzle: NOOP, TFLOPS: 5.36  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6758804', '-42.465602'], time:9.622216ms, swizzle: NOOP, TFLOPS: 7.14  (+33.26%)
+                out_f32x4(t8x8dbuf): ['19.6758804', '-42.465602'], time:7.879400ms, swizzle: NOOP, TFLOPS: 8.72  (+22.12%)
+                    out_f32(cublas): ['19.6758823', '-42.465549'], time:8.469295ms, swizzle: NOOP, TFLOPS: 8.11  
+                         out_f32_th: ['19.6758823', '-42.465549'], time:8.449053ms, swizzle: NOOP, TFLOPS: 8.13  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:7.504630ms, swizzle: NOOP, TFLOPS: 9.16  (+4.99%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:6.661915ms, swizzle: NOOP, TFLOPS: 10.32 (+12.65%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:6.903529ms, swizzle: NOOP, TFLOPS: 9.95  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:6.610870ms, swizzle: NOOP, TFLOPS: 10.39 (+0.77%)
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:7.125926ms, swizzle: 512 , TFLOPS: 9.64  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:6.712770ms, swizzle: 512 , TFLOPS: 10.24 
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:7.004165ms, swizzle: 512 , TFLOPS: 9.81  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:6.430411ms, swizzle: 512 , TFLOPS: 10.69 (+2.81%)
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:5.197143ms, swizzle: NOOP, TFLOPS: 13.22 (+23.73%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=4096, K=4096
+                  out_f32x4(t8x8sk): ['30.4811725', '-34.111625'], time:20.94953ms, swizzle: NOOP, TFLOPS: 6.56  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4811725', '-34.111625'], time:18.48857ms, swizzle: NOOP, TFLOPS: 7.43  (+13.31%)
+                out_f32x4(t8x8dbuf): ['30.4811725', '-34.111625'], time:16.88799ms, swizzle: NOOP, TFLOPS: 8.14  (+9.48%)
+                    out_f32(cublas): ['30.4811744', '-34.111701'], time:18.74749ms, swizzle: NOOP, TFLOPS: 7.33  
+                         out_f32_th: ['30.4811744', '-34.111701'], time:17.94199ms, swizzle: NOOP, TFLOPS: 7.66  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:14.63463ms, swizzle: NOOP, TFLOPS: 9.39  (+15.40%)
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:13.32142ms, swizzle: NOOP, TFLOPS: 10.32 (+9.86%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:14.29274ms, swizzle: NOOP, TFLOPS: 9.62  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:13.19224ms, swizzle: NOOP, TFLOPS: 10.42 (+0.98%)
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:14.92841ms, swizzle: 512 , TFLOPS: 9.21  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:12.97097ms, swizzle: 512 , TFLOPS: 10.60 (+1.71%)
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:14.11366ms, swizzle: 512 , TFLOPS: 9.74  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:12.90795ms, swizzle: 512 , TFLOPS: 10.65 (+0.49%)
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:9.899854ms, swizzle: NOOP, TFLOPS: 13.88 (+30.39%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=4096, K=8192
+                  out_f32x4(t8x8sk): ['23.6401996', '82.2458877'], time:42.62371ms, swizzle: NOOP, TFLOPS: 6.45  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6401996', '82.2458877'], time:39.95699ms, swizzle: NOOP, TFLOPS: 6.88  (+6.67%)
+                out_f32x4(t8x8dbuf): ['23.6401996', '82.2458877'], time:34.53633ms, swizzle: NOOP, TFLOPS: 7.96  (+15.70%)
+                    out_f32(cublas): ['23.6401996', '82.2458877'], time:29.36847ms, swizzle: NOOP, TFLOPS: 9.36  (+17.60%)
+                         out_f32_th: ['23.6401996', '82.2458877'], time:30.60958ms, swizzle: NOOP, TFLOPS: 8.98  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:31.82041ms, swizzle: NOOP, TFLOPS: 8.64  
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:28.98890ms, swizzle: NOOP, TFLOPS: 9.48  (+1.31%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:30.62140ms, swizzle: NOOP, TFLOPS: 8.98  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:27.07171ms, swizzle: NOOP, TFLOPS: 10.15 (+7.08%)
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:31.86814ms, swizzle: 512 , TFLOPS: 8.63  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:29.00271ms, swizzle: 512 , TFLOPS: 9.48  
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:29.04827ms, swizzle: 512 , TFLOPS: 9.46  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:25.80857ms, swizzle: 512 , TFLOPS: 10.65 (+4.89%)
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:20.08564ms, swizzle: NOOP, TFLOPS: 13.69 (+28.49%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=8192, K=2048
+                  out_f32x4(t8x8sk): ['19.6657905', '-42.468093'], time:21.11515ms, swizzle: NOOP, TFLOPS: 6.51  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6657905', '-42.468093'], time:18.68975ms, swizzle: NOOP, TFLOPS: 7.35  (+12.98%)
+                out_f32x4(t8x8dbuf): ['19.6657905', '-42.468093'], time:16.24391ms, swizzle: NOOP, TFLOPS: 8.46  (+15.06%)
+                    out_f32(cublas): ['19.6657905', '-42.468093'], time:14.40949ms, swizzle: NOOP, TFLOPS: 9.54  (+12.73%)
+                         out_f32_th: ['19.6657905', '-42.468093'], time:14.20121ms, swizzle: NOOP, TFLOPS: 9.68  (+1.47%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:14.53597ms, swizzle: NOOP, TFLOPS: 9.46  
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:13.58437ms, swizzle: NOOP, TFLOPS: 10.12 (+4.54%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:13.65997ms, swizzle: NOOP, TFLOPS: 10.06 
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:13.72482ms, swizzle: NOOP, TFLOPS: 10.01 
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:14.08607ms, swizzle: 1024, TFLOPS: 9.76  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:13.17138ms, swizzle: 1024, TFLOPS: 10.43 (+3.14%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:13.47389ms, swizzle: 1024, TFLOPS: 10.20 
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:12.74442ms, swizzle: 1024, TFLOPS: 10.78 (+3.35%)
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:9.976959ms, swizzle: NOOP, TFLOPS: 13.78 (+27.74%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=8192, K=4096
+                  out_f32x4(t8x8sk): ['30.4743366', '-34.111576'], time:41.43910ms, swizzle: NOOP, TFLOPS: 6.63  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4743366', '-34.111576'], time:37.07118ms, swizzle: NOOP, TFLOPS: 7.41  (+11.78%)
+                out_f32x4(t8x8dbuf): ['30.4743366', '-34.111576'], time:32.21487ms, swizzle: NOOP, TFLOPS: 8.53  (+15.07%)
+                    out_f32(cublas): ['30.4743537', '-34.111595'], time:36.83781ms, swizzle: NOOP, TFLOPS: 7.46  
+                         out_f32_th: ['30.4743537', '-34.111595'], time:36.57109ms, swizzle: NOOP, TFLOPS: 7.52  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:28.69601ms, swizzle: NOOP, TFLOPS: 9.58  (+12.26%)
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:26.46622ms, swizzle: NOOP, TFLOPS: 10.39 (+8.43%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:27.43375ms, swizzle: NOOP, TFLOPS: 10.02 
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:26.32811ms, swizzle: NOOP, TFLOPS: 10.44 (+0.52%)
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:28.29074ms, swizzle: 1024, TFLOPS: 9.72  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:26.04756ms, swizzle: 1024, TFLOPS: 10.55 (+1.08%)
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:26.85654ms, swizzle: 1024, TFLOPS: 10.24 
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:25.19891ms, swizzle: 1024, TFLOPS: 10.91 (+3.37%)
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:19.68133ms, swizzle: NOOP, TFLOPS: 13.97 (+28.03%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=8192, K=8192
+                  out_f32x4(t8x8sk): ['23.6361885', '82.2522583'], time:82.85570ms, swizzle: NOOP, TFLOPS: 6.64  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6361885', '82.2522583'], time:73.82977ms, swizzle: NOOP, TFLOPS: 7.45  (+12.23%)
+                out_f32x4(t8x8dbuf): ['23.6361885', '82.2522583'], time:64.42754ms, swizzle: NOOP, TFLOPS: 8.53  (+14.59%)
+                    out_f32(cublas): ['23.6361885', '82.2522583'], time:57.25400ms, swizzle: NOOP, TFLOPS: 9.60  (+12.53%)
+                         out_f32_th: ['23.6361885', '82.2522583'], time:57.48693ms, swizzle: NOOP, TFLOPS: 9.56  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:57.05897ms, swizzle: NOOP, TFLOPS: 9.63  (+0.34%)
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:52.89683ms, swizzle: NOOP, TFLOPS: 10.39 (+7.87%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:54.70535ms, swizzle: NOOP, TFLOPS: 10.05 
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:52.82647ms, swizzle: NOOP, TFLOPS: 10.41 (+0.13%)
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:57.44085ms, swizzle: 1024, TFLOPS: 9.57  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:52.92661ms, swizzle: 1024, TFLOPS: 10.39 
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:54.76884ms, swizzle: 1024, TFLOPS: 10.04 
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:52.11696ms, swizzle: 1024, TFLOPS: 10.55 (+1.36%)
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:39.68477ms, swizzle: NOOP, TFLOPS: 13.85 (+31.33%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=16384, K=2048
+                  out_f32x4(t8x8sk): ['19.6657905', '-42.468093'], time:41.61102ms, swizzle: NOOP, TFLOPS: 6.61  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6657905', '-42.468093'], time:36.64729ms, swizzle: NOOP, TFLOPS: 7.50  (+13.54%)
+                out_f32x4(t8x8dbuf): ['19.6657905', '-42.468093'], time:34.77659ms, swizzle: NOOP, TFLOPS: 7.90  (+5.38%)
+                    out_f32(cublas): ['19.665802 ', '-42.468067'], time:37.33117ms, swizzle: NOOP, TFLOPS: 7.36  
+                         out_f32_th: ['19.665802 ', '-42.468067'], time:37.43345ms, swizzle: NOOP, TFLOPS: 7.34  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:30.55562ms, swizzle: NOOP, TFLOPS: 9.00  (+13.81%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:26.35993ms, swizzle: NOOP, TFLOPS: 10.43 (+15.92%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:29.97341ms, swizzle: NOOP, TFLOPS: 9.17  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:28.45003ms, swizzle: NOOP, TFLOPS: 9.66  
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:29.60767ms, swizzle: 2048, TFLOPS: 9.28  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:25.95212ms, swizzle: 2048, TFLOPS: 10.59 (+1.57%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:27.25737ms, swizzle: 2048, TFLOPS: 10.08 
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:28.90696ms, swizzle: 2048, TFLOPS: 9.51  
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:23.16489ms, swizzle: NOOP, TFLOPS: 11.87 (+12.03%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=16384, K=4096
+                  out_f32x4(t8x8sk): ['30.4609355', '-34.113597'], time:84.47761ms, swizzle: NOOP, TFLOPS: 6.51  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4609355', '-34.113597'], time:72.69890ms, swizzle: NOOP, TFLOPS: 7.56  (+16.20%)
+                out_f32x4(t8x8dbuf): ['30.4609355', '-34.113597'], time:63.78159ms, swizzle: NOOP, TFLOPS: 8.62  (+13.98%)
+                    out_f32(cublas): ['30.4609451', '-34.113651'], time:70.17531ms, swizzle: NOOP, TFLOPS: 7.83  
+                         out_f32_th: ['30.4609451', '-34.113651'], time:74.75614ms, swizzle: NOOP, TFLOPS: 7.35  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:63.51270ms, swizzle: NOOP, TFLOPS: 8.66  (+0.42%)
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:55.54728ms, swizzle: NOOP, TFLOPS: 9.90  (+14.34%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:57.27467ms, swizzle: NOOP, TFLOPS: 9.60  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:53.72986ms, swizzle: NOOP, TFLOPS: 10.23 (+3.38%)
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:59.10704ms, swizzle: 2048, TFLOPS: 9.30  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:55.52632ms, swizzle: 2048, TFLOPS: 9.90  
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:54.61721ms, swizzle: 2048, TFLOPS: 10.07 
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:53.00841ms, swizzle: 2048, TFLOPS: 10.37 (+1.36%)
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:40.50900ms, swizzle: NOOP, TFLOPS: 13.57 (+30.86%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=4096, N=16384, K=8192
+                  out_f32x4(t8x8sk): ['23.6254081', '82.2513809'], time:182.0141ms, swizzle: NOOP, TFLOPS: 6.04  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6254081', '82.2513809'], time:159.4286ms, swizzle: NOOP, TFLOPS: 6.90  (+14.17%)
+                out_f32x4(t8x8dbuf): ['23.6254081', '82.2513809'], time:129.1707ms, swizzle: NOOP, TFLOPS: 8.51  (+23.42%)
+                    out_f32(cublas): ['23.6254081', '82.2513809'], time:123.3439ms, swizzle: NOOP, TFLOPS: 8.91  (+4.72%)
+                         out_f32_th: ['23.6254081', '82.2513809'], time:123.3341ms, swizzle: NOOP, TFLOPS: 8.91  (+0.01%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:123.7373ms, swizzle: NOOP, TFLOPS: 8.89  
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:116.3954ms, swizzle: NOOP, TFLOPS: 9.45  (+5.96%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:115.6520ms, swizzle: NOOP, TFLOPS: 9.51  (+0.64%)
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:109.1780ms, swizzle: NOOP, TFLOPS: 10.07 (+5.93%)
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:119.1521ms, swizzle: 2048, TFLOPS: 9.23  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:109.5120ms, swizzle: 2048, TFLOPS: 10.04 
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:114.7824ms, swizzle: 2048, TFLOPS: 9.58  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:108.3823ms, swizzle: 2048, TFLOPS: 10.14 (+0.73%)
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:83.18924ms, swizzle: NOOP, TFLOPS: 13.22 (+30.28%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=4096, K=2048
+                  out_f32x4(t8x8sk): ['19.6523895', '-42.470115'], time:22.21302ms, swizzle: NOOP, TFLOPS: 6.19  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6523895', '-42.470115'], time:19.65401ms, swizzle: NOOP, TFLOPS: 6.99  (+13.02%)
+                out_f32x4(t8x8dbuf): ['19.6523895', '-42.470115'], time:17.19043ms, swizzle: NOOP, TFLOPS: 8.00  (+14.33%)
+                    out_f32(cublas): ['19.6523895', '-42.470115'], time:16.56212ms, swizzle: NOOP, TFLOPS: 8.30  (+3.79%)
+                         out_f32_th: ['19.6523895', '-42.470115'], time:15.67268ms, swizzle: NOOP, TFLOPS: 8.77  (+5.68%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:15.47601ms, swizzle: NOOP, TFLOPS: 8.88  (+1.27%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:13.94751ms, swizzle: NOOP, TFLOPS: 9.85  (+10.96%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:14.62318ms, swizzle: NOOP, TFLOPS: 9.40  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:14.05589ms, swizzle: NOOP, TFLOPS: 9.78  
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:15.17477ms, swizzle: 512 , TFLOPS: 9.06  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:13.74638ms, swizzle: 512 , TFLOPS: 10.00 (+1.46%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:14.51780ms, swizzle: 512 , TFLOPS: 9.47  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:13.55490ms, swizzle: 512 , TFLOPS: 10.14 (+1.41%)
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:10.58764ms, swizzle: NOOP, TFLOPS: 12.98 (+28.03%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=4096, K=4096
+                  out_f32x4(t8x8sk): ['30.4635562', '-34.112453'], time:43.48297ms, swizzle: NOOP, TFLOPS: 6.32  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4635562', '-34.112453'], time:38.67380ms, swizzle: NOOP, TFLOPS: 7.11  (+12.44%)
+                out_f32x4(t8x8dbuf): ['30.4635562', '-34.112453'], time:33.82205ms, swizzle: NOOP, TFLOPS: 8.13  (+14.34%)
+                    out_f32(cublas): ['30.4635562', '-34.112453'], time:30.97057ms, swizzle: NOOP, TFLOPS: 8.88  (+9.21%)
+                         out_f32_th: ['30.4635562', '-34.112453'], time:30.97298ms, swizzle: NOOP, TFLOPS: 8.87  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:30.32331ms, swizzle: NOOP, TFLOPS: 9.06  (+2.13%)
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:28.00376ms, swizzle: NOOP, TFLOPS: 9.82  (+8.28%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:29.38609ms, swizzle: NOOP, TFLOPS: 9.35  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:28.20384ms, swizzle: NOOP, TFLOPS: 9.75  
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:30.50909ms, swizzle: 512 , TFLOPS: 9.01  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:27.64520ms, swizzle: 512 , TFLOPS: 9.94  (+1.30%)
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:29.15339ms, swizzle: 512 , TFLOPS: 9.43  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:27.21655ms, swizzle: 512 , TFLOPS: 10.10 (+1.57%)
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:21.40004ms, swizzle: NOOP, TFLOPS: 12.84 (+27.18%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=4096, K=8192
+                  out_f32x4(t8x8sk): ['23.6282825', '82.2241592'], time:89.63561ms, swizzle: NOOP, TFLOPS: 6.13  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6282825', '82.2241592'], time:79.20036ms, swizzle: NOOP, TFLOPS: 6.94  (+13.18%)
+                out_f32x4(t8x8dbuf): ['23.6282825', '82.2241592'], time:69.17145ms, swizzle: NOOP, TFLOPS: 7.95  (+14.50%)
+                    out_f32(cublas): ['23.6282825', '82.2241592'], time:63.00621ms, swizzle: NOOP, TFLOPS: 8.73  (+9.79%)
+                         out_f32_th: ['23.6282825', '82.2241592'], time:62.88094ms, swizzle: NOOP, TFLOPS: 8.74  (+0.20%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:61.48307ms, swizzle: NOOP, TFLOPS: 8.94  (+2.27%)
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:56.12039ms, swizzle: NOOP, TFLOPS: 9.80  (+9.56%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:58.57353ms, swizzle: NOOP, TFLOPS: 9.39  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:56.23991ms, swizzle: NOOP, TFLOPS: 9.78  
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:61.23926ms, swizzle: 512 , TFLOPS: 8.98  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:55.33115ms, swizzle: 512 , TFLOPS: 9.94  (+1.43%)
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:58.34794ms, swizzle: 512 , TFLOPS: 9.42  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:54.98349ms, swizzle: 512 , TFLOPS: 10.00 (+0.63%)
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:44.69254ms, swizzle: NOOP, TFLOPS: 12.30 (+23.03%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=8192, K=2048
+                  out_f32x4(t8x8sk): ['19.6523895', '-42.470115'], time:44.17896ms, swizzle: NOOP, TFLOPS: 6.22  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6523895', '-42.470115'], time:39.05575ms, swizzle: NOOP, TFLOPS: 7.04  (+13.12%)
+                out_f32x4(t8x8dbuf): ['19.6523895', '-42.470115'], time:34.24885ms, swizzle: NOOP, TFLOPS: 8.03  (+14.04%)
+                    out_f32(cublas): ['19.6523876', '-42.470130'], time:40.33865ms, swizzle: NOOP, TFLOPS: 6.81  
+                         out_f32_th: ['19.6523876', '-42.470130'], time:39.77365ms, swizzle: NOOP, TFLOPS: 6.91  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:30.36143ms, swizzle: NOOP, TFLOPS: 9.05  (+12.80%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:27.82890ms, swizzle: NOOP, TFLOPS: 9.88  (+9.10%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:29.18362ms, swizzle: NOOP, TFLOPS: 9.42  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:28.07176ms, swizzle: NOOP, TFLOPS: 9.79  
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:30.54385ms, swizzle: 1024, TFLOPS: 9.00  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:27.46803ms, swizzle: 1024, TFLOPS: 10.01 (+1.31%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:29.19106ms, swizzle: 1024, TFLOPS: 9.42  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:27.30987ms, swizzle: 1024, TFLOPS: 10.07 (+0.58%)
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:22.21772ms, swizzle: NOOP, TFLOPS: 12.37 (+22.92%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=8192, K=4096
+                  out_f32x4(t8x8sk): ['30.4635562', '-34.112453'], time:167.3121ms, swizzle: NOOP, TFLOPS: 3.29  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4635562', '-34.112453'], time:96.42608ms, swizzle: NOOP, TFLOPS: 5.70  (+73.51%)
+                out_f32x4(t8x8dbuf): ['30.4635562', '-34.112453'], time:90.22421ms, swizzle: NOOP, TFLOPS: 6.09  (+6.87%)
+                    out_f32(cublas): ['30.4635429', '-34.112545'], time:205.0716ms, swizzle: NOOP, TFLOPS: 2.68  
+                         out_f32_th: ['30.4635429', '-34.112545'], time:202.3115ms, swizzle: NOOP, TFLOPS: 2.72  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:103.5253ms, swizzle: NOOP, TFLOPS: 5.31  
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:109.8216ms, swizzle: NOOP, TFLOPS: 5.01  
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:92.43557ms, swizzle: NOOP, TFLOPS: 5.95  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:110.0095ms, swizzle: NOOP, TFLOPS: 5.00  
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:92.42298ms, swizzle: 1024, TFLOPS: 5.95  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:110.4815ms, swizzle: 1024, TFLOPS: 4.98  
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:95.40543ms, swizzle: 1024, TFLOPS: 5.76  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:112.3109ms, swizzle: 1024, TFLOPS: 4.89  
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:69.44439ms, swizzle: NOOP, TFLOPS: 7.92  (+29.92%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=8192, K=8192
+                  out_f32x4(t8x8sk): ['23.6282825', '82.2241592'], time:256.1792ms, swizzle: NOOP, TFLOPS: 4.29  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6282825', '82.2241592'], time:183.3077ms, swizzle: NOOP, TFLOPS: 6.00  (+39.75%)
+                out_f32x4(t8x8dbuf): ['23.6282825', '82.2241592'], time:171.0278ms, swizzle: NOOP, TFLOPS: 6.43  (+7.18%)
+                    out_f32(cublas): ['23.6282825', '82.2241592'], time:142.8333ms, swizzle: NOOP, TFLOPS: 7.70  (+19.74%)
+                         out_f32_th: ['23.6282825', '82.2241592'], time:144.0984ms, swizzle: NOOP, TFLOPS: 7.63  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:158.3846ms, swizzle: NOOP, TFLOPS: 6.94  
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:165.4858ms, swizzle: NOOP, TFLOPS: 6.64  
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:151.5859ms, swizzle: NOOP, TFLOPS: 7.25  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:166.8546ms, swizzle: NOOP, TFLOPS: 6.59  
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:156.2383ms, swizzle: 1024, TFLOPS: 7.04  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:162.6661ms, swizzle: 1024, TFLOPS: 6.76  
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:153.5513ms, swizzle: 1024, TFLOPS: 7.16  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:166.2764ms, swizzle: 1024, TFLOPS: 6.61  
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:111.6649ms, swizzle: NOOP, TFLOPS: 9.85  (+27.91%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=16384, K=2048
+                  out_f32x4(t8x8sk): ['19.6523895', '-42.470115'], time:94.86618ms, swizzle: NOOP, TFLOPS: 5.80  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6523895', '-42.470115'], time:88.70031ms, swizzle: NOOP, TFLOPS: 6.20  (+6.95%)
+                out_f32x4(t8x8dbuf): ['19.6523895', '-42.470115'], time:77.36465ms, swizzle: NOOP, TFLOPS: 7.11  (+14.65%)
+                    out_f32(cublas): ['19.6523876', '-42.470130'], time:87.71872ms, swizzle: NOOP, TFLOPS: 6.27  
+                         out_f32_th: ['19.6523876', '-42.470130'], time:86.93201ms, swizzle: NOOP, TFLOPS: 6.32  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:63.59257ms, swizzle: NOOP, TFLOPS: 8.64  (+21.66%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:59.07876ms, swizzle: NOOP, TFLOPS: 9.31  (+7.64%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:62.36169ms, swizzle: NOOP, TFLOPS: 8.82  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:59.65874ms, swizzle: NOOP, TFLOPS: 9.22  
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:65.30776ms, swizzle: 2048, TFLOPS: 8.42  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:58.67834ms, swizzle: 2048, TFLOPS: 9.37  (+0.68%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:62.37149ms, swizzle: 2048, TFLOPS: 8.81  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:58.10017ms, swizzle: 2048, TFLOPS: 9.46  (+1.00%)
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:46.72696ms, swizzle: NOOP, TFLOPS: 11.77 (+24.34%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=16384, K=4096
+                  out_f32x4(t8x8sk): ['30.4635562', '-34.112453'], time:192.7383ms, swizzle: NOOP, TFLOPS: 5.70  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4635562', '-34.112453'], time:170.4498ms, swizzle: NOOP, TFLOPS: 6.45  (+13.08%)
+                out_f32x4(t8x8dbuf): ['30.4635562', '-34.112453'], time:153.8192ms, swizzle: NOOP, TFLOPS: 7.15  (+10.81%)
+                    out_f32(cublas): ['30.4635562', '-34.112453'], time:138.6411ms, swizzle: NOOP, TFLOPS: 7.93  (+10.95%)
+                         out_f32_th: ['30.4635562', '-34.112453'], time:137.7753ms, swizzle: NOOP, TFLOPS: 7.98  (+0.63%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:126.7056ms, swizzle: NOOP, TFLOPS: 8.68  (+8.74%)
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:118.3269ms, swizzle: NOOP, TFLOPS: 9.29  (+7.08%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:123.4264ms, swizzle: NOOP, TFLOPS: 8.91  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:118.2451ms, swizzle: NOOP, TFLOPS: 9.30  (+0.07%)
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:129.5278ms, swizzle: 2048, TFLOPS: 8.49  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:118.1957ms, swizzle: 2048, TFLOPS: 9.30  (+0.04%)
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:123.3602ms, swizzle: 2048, TFLOPS: 8.91  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:115.0824ms, swizzle: 2048, TFLOPS: 9.55  (+2.71%)
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:90.75636ms, swizzle: NOOP, TFLOPS: 12.11 (+26.80%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=8192, N=16384, K=8192
+                  out_f32x4(t8x8sk): ['23.6282825', '82.2241592'], time:382.1676ms, swizzle: NOOP, TFLOPS: 5.75  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6282825', '82.2241592'], time:339.4651ms, swizzle: NOOP, TFLOPS: 6.48  (+12.58%)
+                out_f32x4(t8x8dbuf): ['23.6282825', '82.2241592'], time:311.4365ms, swizzle: NOOP, TFLOPS: 7.06  (+9.00%)
+                    out_f32(cublas): ['23.6282825', '82.2241592'], time:271.6015ms, swizzle: NOOP, TFLOPS: 8.10  (+14.67%)
+                         out_f32_th: ['23.6282825', '82.2241592'], time:271.3558ms, swizzle: NOOP, TFLOPS: 8.10  (+0.09%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:266.4506ms, swizzle: NOOP, TFLOPS: 8.25  (+1.84%)
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:247.4330ms, swizzle: NOOP, TFLOPS: 8.89  (+7.69%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:255.6653ms, swizzle: NOOP, TFLOPS: 8.60  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:244.6530ms, swizzle: NOOP, TFLOPS: 8.99  (+1.14%)
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:274.7352ms, swizzle: 2048, TFLOPS: 8.00  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:253.1059ms, swizzle: 2048, TFLOPS: 8.69  
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:259.0934ms, swizzle: 2048, TFLOPS: 8.49  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:242.6947ms, swizzle: 2048, TFLOPS: 9.06  (+0.81%)
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:186.7486ms, swizzle: NOOP, TFLOPS: 11.78 (+29.96%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=4096, K=2048
+                  out_f32x4(t8x8sk): ['19.6523895', '-42.470115'], time:51.02841ms, swizzle: NOOP, TFLOPS: 5.39  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6523895', '-42.470115'], time:45.25227ms, swizzle: NOOP, TFLOPS: 6.07  (+12.76%)
+                out_f32x4(t8x8dbuf): ['19.6523895', '-42.470115'], time:40.80893ms, swizzle: NOOP, TFLOPS: 6.74  (+10.89%)
+                    out_f32(cublas): ['19.6523647', '-42.470123'], time:45.80309ms, swizzle: NOOP, TFLOPS: 6.00  
+                         out_f32_th: ['19.6523647', '-42.470123'], time:44.57442ms, swizzle: NOOP, TFLOPS: 6.17  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:34.09674ms, swizzle: NOOP, TFLOPS: 8.06  (+19.69%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:34.41691ms, swizzle: NOOP, TFLOPS: 7.99  
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:35.11621ms, swizzle: NOOP, TFLOPS: 7.83  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:31.30540ms, swizzle: NOOP, TFLOPS: 8.78  (+8.92%)
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:33.75990ms, swizzle: 512 , TFLOPS: 8.14  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:30.52544ms, swizzle: 512 , TFLOPS: 9.00  (+2.56%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:33.07132ms, swizzle: 512 , TFLOPS: 8.31  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:33.35964ms, swizzle: 512 , TFLOPS: 8.24  
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:27.59501ms, swizzle: NOOP, TFLOPS: 9.96  (+10.62%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=4096, K=4096
+                  out_f32x4(t8x8sk): ['30.4635562', '-34.112453'], time:1219.213ms, swizzle: NOOP, TFLOPS: 0.45  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4635562', '-34.112453'], time:1133.251ms, swizzle: NOOP, TFLOPS: 0.49  (+7.59%)
+                out_f32x4(t8x8dbuf): ['30.4635562', '-34.112453'], time:1161.435ms, swizzle: NOOP, TFLOPS: 0.47  
+                    out_f32(cublas): ['30.4635562', '-34.112453'], time:1106.532ms, swizzle: NOOP, TFLOPS: 0.50  (+2.41%)
+                         out_f32_th: ['30.4635562', '-34.112453'], time:1104.108ms, swizzle: NOOP, TFLOPS: 0.50  (+0.22%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:2290.162ms, swizzle: NOOP, TFLOPS: 0.24  
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:2343.930ms, swizzle: NOOP, TFLOPS: 0.23  
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:2232.646ms, swizzle: NOOP, TFLOPS: 0.25  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:2283.432ms, swizzle: NOOP, TFLOPS: 0.24  
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:2379.372ms, swizzle: 512 , TFLOPS: 0.23  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:2343.763ms, swizzle: 512 , TFLOPS: 0.23  
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:2407.886ms, swizzle: 512 , TFLOPS: 0.23  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:2390.205ms, swizzle: 512 , TFLOPS: 0.23  
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:1170.438ms, swizzle: NOOP, TFLOPS: 0.47  
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=4096, K=8192
+                  out_f32x4(t8x8sk): ['23.6282825', '82.2241592'], time:168.3171ms, swizzle: NOOP, TFLOPS: 6.53  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6282825', '82.2241592'], time:152.0980ms, swizzle: NOOP, TFLOPS: 7.23  (+10.66%)
+                out_f32x4(t8x8dbuf): ['23.6282825', '82.2241592'], time:144.5646ms, swizzle: NOOP, TFLOPS: 7.61  (+5.21%)
+                    out_f32(cublas): ['23.6282825', '82.2241592'], time:124.1609ms, swizzle: NOOP, TFLOPS: 8.86  (+16.43%)
+                         out_f32_th: ['23.6282825', '82.2241592'], time:129.2690ms, swizzle: NOOP, TFLOPS: 8.51  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:124.5932ms, swizzle: NOOP, TFLOPS: 8.82  
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:113.8857ms, swizzle: NOOP, TFLOPS: 9.65  (+9.02%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:118.4831ms, swizzle: NOOP, TFLOPS: 9.28  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:114.7129ms, swizzle: NOOP, TFLOPS: 9.58  
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:124.4943ms, swizzle: 512 , TFLOPS: 8.83  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:116.1097ms, swizzle: 512 , TFLOPS: 9.47  
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:120.8917ms, swizzle: 512 , TFLOPS: 9.10  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:113.9261ms, swizzle: 512 , TFLOPS: 9.65  
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:88.42759ms, swizzle: NOOP, TFLOPS: 12.43 (+28.79%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=8192, K=2048
+                  out_f32x4(t8x8sk): ['19.6523895', '-42.470115'], time:306.5478ms, swizzle: NOOP, TFLOPS: 1.79  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6523895', '-42.470115'], time:129.6354ms, swizzle: NOOP, TFLOPS: 4.24  (+136.47%)
+                out_f32x4(t8x8dbuf): ['19.6523895', '-42.470115'], time:122.7159ms, swizzle: NOOP, TFLOPS: 4.48  (+5.64%)
+                    out_f32(cublas): ['19.6523895', '-42.470115'], time:113.3336ms, swizzle: NOOP, TFLOPS: 4.85  (+8.28%)
+                         out_f32_th: ['19.6523895', '-42.470115'], time:115.2405ms, swizzle: NOOP, TFLOPS: 4.77  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:157.6936ms, swizzle: NOOP, TFLOPS: 3.49  
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:189.4297ms, swizzle: NOOP, TFLOPS: 2.90  
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:156.7419ms, swizzle: NOOP, TFLOPS: 3.51  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:188.4817ms, swizzle: NOOP, TFLOPS: 2.92  
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:157.6670ms, swizzle: 1024, TFLOPS: 3.49  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:211.4022ms, swizzle: 1024, TFLOPS: 2.60  
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:157.7163ms, swizzle: 1024, TFLOPS: 3.49  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:209.5112ms, swizzle: 1024, TFLOPS: 2.62  
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:81.99391ms, swizzle: NOOP, TFLOPS: 6.70  (+38.22%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=8192, K=4096
+                  out_f32x4(t8x8sk): ['30.4635562', '-34.112453'], time:360.0765ms, swizzle: NOOP, TFLOPS: 3.05  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4635562', '-34.112453'], time:212.2523ms, swizzle: NOOP, TFLOPS: 5.18  (+69.65%)
+                out_f32x4(t8x8dbuf): ['30.4635562', '-34.112453'], time:197.8820ms, swizzle: NOOP, TFLOPS: 5.56  (+7.26%)
+                    out_f32(cublas): ['30.4635562', '-34.112453'], time:185.9244ms, swizzle: NOOP, TFLOPS: 5.91  (+6.43%)
+                         out_f32_th: ['30.4635562', '-34.112453'], time:186.8160ms, swizzle: NOOP, TFLOPS: 5.89  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:189.5906ms, swizzle: NOOP, TFLOPS: 5.80  
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:239.4307ms, swizzle: NOOP, TFLOPS: 4.59  
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:189.7935ms, swizzle: NOOP, TFLOPS: 5.79  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:239.7053ms, swizzle: NOOP, TFLOPS: 4.59  
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:194.9759ms, swizzle: 1024, TFLOPS: 5.64  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:238.3227ms, swizzle: 1024, TFLOPS: 4.61  
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:195.1215ms, swizzle: 1024, TFLOPS: 5.64  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:241.1322ms, swizzle: 1024, TFLOPS: 4.56  
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:135.3742ms, swizzle: NOOP, TFLOPS: 8.12  (+37.34%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=8192, K=8192
+                  out_f32x4(t8x8sk): ['23.6282825', '82.2241592'], time:537.9326ms, swizzle: NOOP, TFLOPS: 4.09  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6282825', '82.2241592'], time:390.3077ms, swizzle: NOOP, TFLOPS: 5.63  (+37.82%)
+                out_f32x4(t8x8dbuf): ['23.6282825', '82.2241592'], time:367.4913ms, swizzle: NOOP, TFLOPS: 5.98  (+6.21%)
+                    out_f32(cublas): ['23.6282825', '82.2241592'], time:312.5158ms, swizzle: NOOP, TFLOPS: 7.04  (+17.59%)
+                         out_f32_th: ['23.6282825', '82.2241592'], time:311.9281ms, swizzle: NOOP, TFLOPS: 7.05  (+0.19%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:319.7804ms, swizzle: NOOP, TFLOPS: 6.88  
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:338.6205ms, swizzle: NOOP, TFLOPS: 6.49  
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:312.3561ms, swizzle: NOOP, TFLOPS: 7.04  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:341.6430ms, swizzle: NOOP, TFLOPS: 6.44  
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:325.1316ms, swizzle: 1024, TFLOPS: 6.76  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:338.7765ms, swizzle: 1024, TFLOPS: 6.49  
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:315.9251ms, swizzle: 1024, TFLOPS: 6.96  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:339.9980ms, swizzle: 1024, TFLOPS: 6.47  
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:230.2479ms, swizzle: NOOP, TFLOPS: 9.55  (+35.47%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=16384, K=2048
+                  out_f32x4(t8x8sk): ['19.6523895', '-42.470115'], time:208.2901ms, swizzle: NOOP, TFLOPS: 5.28  (+0.00%)
+                 out_f32x4(t8x8bcf): ['19.6523895', '-42.470115'], time:184.9849ms, swizzle: NOOP, TFLOPS: 5.94  (+12.60%)
+                out_f32x4(t8x8dbuf): ['19.6523895', '-42.470115'], time:171.2190ms, swizzle: NOOP, TFLOPS: 6.42  (+8.04%)
+                    out_f32(cublas): ['19.6523895', '-42.470115'], time:149.4838ms, swizzle: NOOP, TFLOPS: 7.36  (+14.54%)
+                         out_f32_th: ['19.6523895', '-42.470115'], time:148.6346ms, swizzle: NOOP, TFLOPS: 7.40  (+0.57%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['19.6523857', '-42.469680'], time:143.0875ms, swizzle: NOOP, TFLOPS: 7.68  (+3.88%)
+    out_tf32(mma2x4+warp2x4+stage2): ['19.6523857', '-42.469680'], time:131.2230ms, swizzle: NOOP, TFLOPS: 8.38  (+9.04%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['19.6523857', '-42.469680'], time:137.9089ms, swizzle: NOOP, TFLOPS: 7.97  
+  out_tf32(mma2x4+...+stage2+dsmem): ['19.6523857', '-42.469680'], time:131.5688ms, swizzle: NOOP, TFLOPS: 8.36  
+out_tf32(mma2x4+...+stage3+swizzle): ['19.6523857', '-42.469680'], time:143.7628ms, swizzle: 2048, TFLOPS: 7.65  
+out_tf32(mma2x4+...+stage2+swizzle): ['19.6523857', '-42.469680'], time:129.7977ms, swizzle: 2048, TFLOPS: 8.47  (+1.10%)
+ out_tf32(...+stage3+dsmem+swizzle): ['19.6523857', '-42.469680'], time:137.9657ms, swizzle: 2048, TFLOPS: 7.97  
+ out_tf32(...+stage2+dsmem+swizzle): ['19.6523857', '-42.469680'], time:128.9769ms, swizzle: 2048, TFLOPS: 8.52  (+0.64%)
+              out_tf32(cublas+tf32): ['19.6523857', '-42.469680'], time:97.17211ms, swizzle: NOOP, TFLOPS: 11.32 (+32.73%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=16384, K=4096
+                  out_f32x4(t8x8sk): ['30.4635562', '-34.112453'], time:413.9431ms, swizzle: NOOP, TFLOPS: 5.31  (+0.00%)
+                 out_f32x4(t8x8bcf): ['30.4635562', '-34.112453'], time:371.0274ms, swizzle: NOOP, TFLOPS: 5.93  (+11.57%)
+                out_f32x4(t8x8dbuf): ['30.4635562', '-34.112453'], time:355.1475ms, swizzle: NOOP, TFLOPS: 6.19  (+4.47%)
+                    out_f32(cublas): ['30.4635562', '-34.112453'], time:300.3678ms, swizzle: NOOP, TFLOPS: 7.32  (+18.24%)
+                         out_f32_th: ['30.4635562', '-34.112453'], time:299.1095ms, swizzle: NOOP, TFLOPS: 7.35  (+0.42%)
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['30.4632587', '-34.111469'], time:289.1344ms, swizzle: NOOP, TFLOPS: 7.61  (+3.45%)
+    out_tf32(mma2x4+warp2x4+stage2): ['30.4632587', '-34.111469'], time:264.9240ms, swizzle: NOOP, TFLOPS: 8.30  (+9.14%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['30.4632587', '-34.111469'], time:277.7199ms, swizzle: NOOP, TFLOPS: 7.92  
+  out_tf32(mma2x4+...+stage2+dsmem): ['30.4632587', '-34.111469'], time:267.4883ms, swizzle: NOOP, TFLOPS: 8.22  
+out_tf32(mma2x4+...+stage3+swizzle): ['30.4632587', '-34.111469'], time:289.2125ms, swizzle: 2048, TFLOPS: 7.60  
+out_tf32(mma2x4+...+stage2+swizzle): ['30.4632587', '-34.111469'], time:265.2704ms, swizzle: 2048, TFLOPS: 8.29  
+ out_tf32(...+stage3+dsmem+swizzle): ['30.4632587', '-34.111469'], time:277.7734ms, swizzle: 2048, TFLOPS: 7.92  
+ out_tf32(...+stage2+dsmem+swizzle): ['30.4632587', '-34.111469'], time:260.1119ms, swizzle: 2048, TFLOPS: 8.45  (+1.85%)
+              out_tf32(cublas+tf32): ['30.4632587', '-34.111469'], time:203.5926ms, swizzle: NOOP, TFLOPS: 10.80 (+27.76%)
+----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+                                                       M=16384, N=16384, K=8192
+                  out_f32x4(t8x8sk): ['23.6282825', '82.2241592'], time:855.4601ms, swizzle: NOOP, TFLOPS: 5.14  (+0.00%)
+                 out_f32x4(t8x8bcf): ['23.6282825', '82.2241592'], time:747.2471ms, swizzle: NOOP, TFLOPS: 5.89  (+14.48%)
+                out_f32x4(t8x8dbuf): ['23.6282825', '82.2241592'], time:773.6402ms, swizzle: NOOP, TFLOPS: 5.68  
+                    out_f32(cublas): ['23.6282825', '82.2241592'], time:602.8181ms, swizzle: NOOP, TFLOPS: 7.30  (+23.96%)
+                         out_f32_th: ['23.6282825', '82.2241592'], time:603.6965ms, swizzle: NOOP, TFLOPS: 7.29  
+--------------------------------------------------------------WMMA----------------------------------------------------------------
+    out_tf32(mma2x4+warp2x4+stage3): ['23.6271362', '82.2249679'], time:584.9673ms, swizzle: NOOP, TFLOPS: 7.52  (+3.05%)
+    out_tf32(mma2x4+warp2x4+stage2): ['23.6271362', '82.2249679'], time:538.7808ms, swizzle: NOOP, TFLOPS: 8.16  (+8.57%)
+  out_tf32(mma2x4+...+stage3+dsmem): ['23.6271362', '82.2249679'], time:563.5427ms, swizzle: NOOP, TFLOPS: 7.80  
+  out_tf32(mma2x4+...+stage2+dsmem): ['23.6271362', '82.2249679'], time:543.5886ms, swizzle: NOOP, TFLOPS: 8.09  
+out_tf32(mma2x4+...+stage3+swizzle): ['23.6271362', '82.2249679'], time:615.4646ms, swizzle: 2048, TFLOPS: 7.15  
+out_tf32(mma2x4+...+stage2+swizzle): ['23.6271362', '82.2249679'], time:558.4126ms, swizzle: 2048, TFLOPS: 7.88  
+ out_tf32(...+stage3+dsmem+swizzle): ['23.6271362', '82.2249679'], time:587.6507ms, swizzle: 2048, TFLOPS: 7.48  
+ out_tf32(...+stage2+dsmem+swizzle): ['23.6271362', '82.2249679'], time:559.3924ms, swizzle: 2048, TFLOPS: 7.86  
+              out_tf32(cublas+tf32): ['23.6271362', '82.2249679'], time:406.7382ms, swizzle: NOOP, TFLOPS: 10.81 (+32.46%)
+----------------------------------------------------------------------------------------------------------------------------------

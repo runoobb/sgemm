@@ -3,6 +3,7 @@ import time
 import torch
 from torch.utils.cpp_extension import load
 import os
+from sgemm import run_benchmark
 
 # SINGLE KERNEL LAUNCH SCRIPT
 parser = argparse.ArgumentParser()
@@ -11,9 +12,8 @@ parser.add_argument('--kernel', type=str, required=True,
 parser.add_argument('--M', type=int, default=1024)
 parser.add_argument('--N', type=int, default=1024)
 parser.add_argument('--K', type=int, default=1024)
-parser.add_argument('--iters', type=int, default=10)
-parser.add_argument('--warmup', type=int, default=2)
-parser.add_argument('--verbose', action='store_true')
+parser.add_argument('--stages', type=int, default=-1)
+parser.add_argument('--swizzle', type=bool, default=False)
 args = parser.parse_args()
 
 # load extension (adjust flags as needed for your environment)
@@ -54,20 +54,5 @@ if not hasattr(lib, args.kernel):
 
 kernel = getattr(lib, args.kernel)
 
-# Warmup
-for _ in range(args.warmup):
-    try:
-        kernel(a, b, c)
-    except TypeError:
-        # some kernels require extra args (stages/swizzle); try default simple call
-        kernel(a, b, c)
-torch.cuda.synchronize()
+run_benchmark(perf_func=kernel, a=a, b=b, out=c, stages=args.stages, swizzle=args.swizzle)
 
-# Timed runs (ncu will capture launches)
-start = time.time()
-for _ in range(args.iters):
-    kernel(a, b, c)
-torch.cuda.synchronize()
-end = time.time()
-
-print(f'Run {args.kernel} M={M} N={N} K={K} iters={args.iters} time_per_iter_ms={(end-start)/args.iters*1000:.3f}')
